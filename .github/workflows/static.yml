@@ -30,6 +30,9 @@ jobs:
             /*
             !/README.md
           sparse-checkout-cone-mode: false
+      - name: Fetch 404.html from main site into repo root
+        run: |
+          curl -o 404.html https://raw.githubusercontent.com/CaptainChicky/captainchicky.github.io/refs/heads/main/404.html
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
