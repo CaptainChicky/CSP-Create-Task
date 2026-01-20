@@ -28,6 +28,7 @@ jobs:
         with:
           sparse-checkout: |
             /*
+            !/README.md
           sparse-checkout-cone-mode: false
       - name: Fetch 404.html from main site into repo root
         run: |
