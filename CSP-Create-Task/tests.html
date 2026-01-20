@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Canvas Stuff Archive</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Courier New', monospace;
+      background: #1a1a1a;
+      color: #fff;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 10px;
+      color: #4CAF50;
+    }
+
+    p {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #aaa;
+      font-size: 14px;
+    }
+
+    .container {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .canvas-section {
+      background: #2a2a2a;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    }
+
+    .canvas-section h2 {
+      color: #64B5F6;
+      margin-bottom: 10px;
+      font-size: 18px;
+    }
+
+    .canvas-section p {
+      color: #999;
+      font-size: 12px;
+      margin-bottom: 15px;
+      text-align: left;
+    }
+
+    canvas {
+      border: 2px solid #444;
+      background: #fff;
+      display: block;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Canvas Stuff Archive</h1>
+  <p>This is just my canvas API experiments while trying to make my AP CSP project</p>
+
+  <div class="container">
+    <div class="canvas-section">
+      <h2>Drawing Tests & Techniques</h2>
+      <p>Grid systems, shapes, curves, text, rectangles, images, controllable spaceship</p>
+      <canvas id="drawingCanvas" width="800" height="600"></canvas>
+    </div>
+
+    <div class="canvas-section">
+      <h2>Physics Simulation</h2>
+      <p>20 bouncing balls with gravity, friction, collision detection</p>
+      <canvas id="physicsCanvas" width="800" height="600"></canvas>
+    </div>
+  </div>
+
+  <!-- LEFT CANVAS: Drawing tests from archive.js -->
+  <script src="./junk/archive.js"></script>
+
+  <!-- RIGHT CANVAS: Physics simulation from Scene.js and Ball.js -->
+  <script type="module">
+    import Scene from './junk/Scene.js';
+    new Scene('physicsCanvas');
+  </script>
+</body>
+</html>
